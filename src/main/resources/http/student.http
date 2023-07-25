@@ -1,0 +1,48 @@
+###Create student
+POST localhost:8081/student/create
+Content-Type: application/json
+
+{
+  "name": "Maxmud",
+  "surname": "Maxmudov",
+  "age": 23,
+  "level": "Strong-Junior",
+  "gender": "Male"
+}
+
+###Get all
+GET localhost:8081/student/all
+
+###Get By id
+GET localhost:8080/student/2
+
+###Update student
+PUT localhost:8081/student/update/2
+Content-Type: application/json
+
+{
+  "name": "Alish",
+  "surname": "Alijonov",
+  "age": 25,
+  "level": "middle",
+  "gender": "male"
+}
+
+###Delete by Id
+DELETE localhost:8081/student/delete/8
+
+###Get By Name
+GET localhost:8081/student/getByName?name=Aliya
+
+###Get By Surname
+GET localhost:8081/student/getBySurname?surname=Aliyev
+
+###Get By Date
+GET localhost:8081/student/getByDate?createdDate=2023-07-22
+
+###Get Page
+GET localhost:8081/student/pagination?page=1&size=10
+
+###Get By Level Page
+GET localhost:8081/student/pagaByLevel?page=1&size=10&level=Junior
+
